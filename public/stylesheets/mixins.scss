@@ -1,0 +1,27 @@
+@mixin vendor-prefix($prop, $values...) {
+  -webkit-#{$prop}: #{$values};
+  -ms-#{$prop}: #{$values};
+  -moz-#{$prop}: #{$values};
+  -o-#{$prop}: #{$values};
+  #{$prop}: #{$values};
+}
+
+@mixin vendor-prefix-alt($prop, $value) {
+  #{$prop}: -webkit-#{$value};
+  #{$prop}: -ms-#{$value};
+  #{$prop}: -moz-#{$value};
+  #{$prop}: -o-#{$value};
+  #{$prop}: #{$value}; 
+}
+
+@mixin myflex($display: flex,
+$flex-direction: row,
+$flex-wrap: wrap,
+$flexdirection: roW,
+$justify-content: space-between) {
+  @include vendor-prefix(flex-direction, $flex-direction);
+  @include vendor-prefix(justify-content, $justify-content);
+  @include vendor-prefix(flex-wrap, $flex-wrap);
+  display: $display;
+}
+
