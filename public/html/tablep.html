@@ -1,0 +1,20 @@
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Category</th>
+			<th>Price</th>
+			<th colspan="3"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="p in collection">
+			<td>{{ p.name }}</td>
+			<td>{{ p.description }}</td>
+			<td>{{ p.category }}</td>
+			<td>{{ p.price }}</td>
+			<td><a href="/#/view4" ng-click="sendId({id: p.id})">Show</a></td>
+		</tr>
+	</tbody>
+</table>

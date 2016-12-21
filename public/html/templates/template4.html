@@ -1,0 +1,13 @@
+<div  class="template">
+
+  <h2>{{ct4.templateTitle}}</h2>
+  <p>Current Product Id: {{ct4.currentId}}</p>
+  <p>{{ct4.message}} </p> 
+
+  <h3>Show using 'fetchJson()'</h3>
+	<show-table template = "show" item = "ct4.show"></show-table>
+
+  <h3>Show using $Resource (Product.get())</h3>
+	<show-table template = "show" item = "ct4.showalt"></show-table>
+
+</div> 
