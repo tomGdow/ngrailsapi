@@ -26,6 +26,8 @@ angular.module('myApp.services', [])
 			"nav1" : {"url": "view1", "class": "home"},
 			"nav2" : {"url": "view2", "class": "viewtwo"},
 			"nav3" : {"url": "view3", "class": "viewthree"},
+      "nav4" : {"url": "view4", "class": "viewalt"},
+      "nav5" : {"url": "view5", "class": "viewalt2"},
 		}; 
 
 		switch (true) {
@@ -38,6 +40,12 @@ angular.module('myApp.services', [])
 			case activeHelper(RegExp(data.nav3.url)):
 				return data.nav3.class;
 				break;
+      case activeHelper(RegExp(data.nav4.url)):
+        return  data.nav4.class;
+        break;
+      case activeHelper(RegExp(data.nav5.url)):
+        return  data.nav5.class;
+        break;
 			default:
 				return data.nav1.class;
 		}

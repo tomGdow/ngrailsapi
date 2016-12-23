@@ -57,6 +57,10 @@ nav li {
   color: white;
   background-color: #0078A0; }
 
+.viewalt .home, .viewalt2 .viewtwo {
+  color: black;
+  background-color: #999999; }
+
 html {
   height: 100%;
   font-size: 100%;

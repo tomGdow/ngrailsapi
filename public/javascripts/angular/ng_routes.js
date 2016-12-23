@@ -33,6 +33,12 @@ config(['$routeProvider', function($routeProvider) {
     controllerAs: 'ct4'
   }); 
 
+  $routeProvider.when('/view5', {
+    templateUrl: 'html/templates/template4.html',
+    controller: 'MyCtrl4', 
+    controllerAs: 'ct4'
+  }); 
+
   $routeProvider.otherwise({redirectTo: '/view1'});
 
 }]);

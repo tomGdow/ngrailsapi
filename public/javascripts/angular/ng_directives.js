@@ -8,20 +8,23 @@ directive('appVersion', ['version', function(version) {
 }])
 .directive('productTable', function () {
   return {
-    scope: {collection: '=',
-      'sendId': '&onSend'}, 
-      restrict: 'E',
-      templateUrl: function (elem, attr) {
-        return './html/' + attr.template + '.html'
-      } 
+    scope: {
+      collection: '=',
+      'sendId': '&onSend',
+      moveto: '='
+    }, 
+    restrict: 'E',
+    templateUrl: function (elem, attr) {
+      return './html/' + attr.template + '.html'
+    } 
   }
 })
 .directive('showTable', function () {
   return {
     scope: {item: '='}, 
-      restrict: 'E',
-      templateUrl: function (elem, attr) {
-        return './html/' + attr.template + '.html'
-      } 
+    restrict: 'E',
+    templateUrl: function (elem, attr) {
+      return './html/' + attr.template + '.html'
+    } 
   }
 });
